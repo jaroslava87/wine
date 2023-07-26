@@ -1,0 +1,173 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.entry {
+    &__top {
+        &-container {
+            flex-direction: column;
+            padding: $margin80;
+            padding-bottom: 0;
+            @media (max-width: $breackPoint_sm) {
+                padding: $margin30 10px 0 $margin30;
+            } 
+            &-title {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: $margin40;
+                @media (max-width: $breackPoint_sm) {
+                    margin-bottom: $margin20;
+                }
+                &-leftimg {
+                    position: absolute;
+                    top: -80px;
+                    left: -80px;
+                    @media (max-width: $breackPoint_xl) {
+                        width: 30%;
+                    } 
+                    @media (max-width: $breackPoint_sm) {
+                        top: -8px;
+                        left: -10px;;
+                    } 
+                }
+                &-rightimg {
+                    position: absolute;
+                    top: -50px;
+                    right: -90px;
+                    @media (max-width: $breackPoint_xl) {
+                        width: 30%;
+                    } 
+                    @media (max-width: $breackPoint_sm) {
+                        top: 0;
+                        right: -10px;;
+                    } 
+                }
+                h2 {
+                    color: $beuge;
+                    padding: 0 $margin20;
+                    @include font (600, 24px, 145%);
+                    @media (max-width: $breackPoint_sm) {
+                       font-size: 20px;
+                       text-align: center;
+                    } 
+                }
+                &-leftline {
+                    border-top: 1px solid $white;
+                    width: 15%;
+                }
+                &-rightline {
+                    border-top: 1px solid $white;
+                    width: 15%;
+                }
+            }
+            &-line {
+                border-top: 1px solid $beuge;
+                width: 15%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: $margin40;
+                @media (max-width: $breackPoint_sm) {
+                    padding-top: $margin20;
+                    width: 70%; 
+                    border-color: $white;
+                }
+            }
+            p {
+                margin-left: auto;
+                margin-right: auto;
+                @include font (400, 16px, 165%);
+                color: $white;
+                width: 55%;
+                text-align: center;
+                @media (max-width: $breackPoint_xl) {
+                    width: 70%;
+                } 
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 10px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__bottom {
+        padding: 0 $margin80 $margin40 $margin80 ;
+        @media (max-width: $breackPoint_sm) {
+            padding: 0 10px $margin30 10px;
+        }
+        &-form {
+            flex-direction: column;
+            padding: $margin80 $margin80 $margin60 $margin80;
+            gap: $margin30;
+            border-bottom: 1px solid $white;
+            border-left: 1px solid $white;
+            border-right: 1px solid $white;
+            @media (max-width: $breackPoint_sm) {
+                padding: 10px 10px $margin30 10px;
+                gap: $margin20;
+            }
+            &-top {
+                justify-content: space-between;
+                @media (max-width: $breackPoint_sm) {
+                    flex-direction: column;
+                    gap: $margin20;
+                }
+                input {
+                    border-style: none;
+                    width: 48%;
+                    border-bottom: 2px solid $white;
+                    background-color: transparent;
+                    padding: 5px;
+                    @include font (400, 20px, 165%);
+                    color: $white;
+                    @include transition (all);
+                    &:focus-visible {
+                        border-color: $orange;
+                        outline: none;
+                        color: $orange;
+                    }
+                    &:hover {
+                        border-color: $beuge;
+                        color: $beuge;
+                    }
+                    &:active {
+                        border-color: $light-brown;
+                        color: $light-brown;
+                    }
+                    @media (max-width: $breackPoint_sm) {
+                        font-size: 10px;
+                        width: 100%;
+                    }
+                }
+            }
+            textarea {
+                border-style: none;
+                border-bottom: 2px solid $white;
+                background-color: transparent;
+                padding: 5px 5px $margin20 5px;
+                @include font (400, 20px, 165%);
+                color: $white;
+                margin-bottom: $margin30;
+                @include transition (all);
+                &:focus-visible {
+                    border-color: $orange;
+                    outline: none;
+                    color: $orange;
+                }
+                &:hover {
+                    border-color: $beuge;
+                    color: $beuge;
+                }
+                &:active {
+                    border-color: $light-brown;
+                    color: $light-brown;
+                }
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

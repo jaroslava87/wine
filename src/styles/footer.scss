@@ -1,0 +1,157 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+footer {
+    background-color: $light-brown;
+}
+
+.footer {
+    grid-template-areas:
+    "nav"
+    "cont";
+    padding: $margin40 0;
+    @media (max-width: $breackPoint_sm) {
+        grid-template-areas:
+        "nav cont";
+        padding: $margin20 0;
+    }
+    &__nav {
+        grid-area: nav;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: $margin20 $margin60;
+        @media (max-width: $breackPoint_md) {
+            padding: $margin20 $margin20;
+        }
+        @media (max-width: $breackPoint_sm) {
+            border-right: 1px solid white;
+        }
+        ul {
+            justify-content: space-between;
+            gap: 10px;
+            @media (max-width: $breackPoint_sm) {
+                flex-direction: column;
+            }
+            li {
+                a {
+                    @include font (400, 14px, 145%);
+                    border-bottom: 1px solid transparent;
+                    color: $white;
+                    @include transition (all);
+                    &:focus-visible {
+                        color: $brown;
+                        outline: none;
+                    }
+                    @include hover();
+                    @include active();
+                    &:focus-visible {
+                        color: $brown;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+    &__contacts {
+        grid-area: cont;
+        grid-template-areas:
+        "cart1 cart2 cart3 cart4";
+        @media (max-width: $breackPoint_sm) {
+            grid-template-areas:
+        "cart1"
+        "cart2"
+        "cart3"
+        "cart4";
+        }
+        &-cart1 {
+            grid-area: cart1;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            justify-content: center;
+            padding: $margin20 0;
+            @media (max-width: $breackPoint_sm) {
+                border-right: none;
+                border-top: 1px solid white;
+            }
+            p {
+                @include font (400, 16px, 145%);
+                color: $white;
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 11px;
+                }
+            }
+        }
+        &-cart2 {
+            grid-area: cart2;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            justify-content: center;
+            padding: $margin20 0;
+            @media (max-width: $breackPoint_sm) {
+                border-right: none;
+            }
+            a {
+                @include font (400, 14px, 145%);
+                color: $white;
+                border-bottom: 1px solid transparent;
+                @include transition (all);
+                &:focus-visible {
+                    color: $brown;
+                    outline: none;
+                }
+                @include hover();
+                @include active();
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 12px;
+                }
+            }
+        }
+        &-cart3 {
+            grid-area: cart3;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            justify-content: center;
+            align-items: center;
+            gap: $margin20;
+            @media (max-width: $breackPoint_sm) {
+                border-right: none;
+                padding: $margin20 0;
+            }
+            a {
+                svg {
+                    path {
+                        &:focus-visible {
+                            fill: $brown;
+                            outline: none;
+                        }
+                        &:hover {
+                            fill: $beuge;
+                            border-color: $beuge;
+                        }
+                        &:active {
+                            fill: $orange;
+                        }
+                    }
+                }
+            }
+        }
+        &-cart4 {
+            grid-area: cart4;
+            border-bottom: 1px solid white;
+            justify-content: center;
+            padding: $margin20 0;
+            @media (max-width: $breackPoint_sm) {
+                border-right: none;
+            }
+            p{
+                @include font (400, 14px, 145%);
+                color: $white;
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

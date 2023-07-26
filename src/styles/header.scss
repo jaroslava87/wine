@@ -1,0 +1,83 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.header {
+    background-image: url(../img/hero__img.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: $breackPoint_md) {
+        padding: 0 10px;
+      }
+    &__top {
+        &-contact {
+            padding-top: $margin30;
+            padding-bottom: 28px;
+            justify-content: space-between;
+            @media (max-width: $breackPoint_md) {
+                padding-top: $margin20;
+                padding-bottom: 18px;
+            }
+            @media (max-width: $breackPoint_sm) {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            a {
+                @include font (400, 16px, 145%);
+                color: $white;
+                border-bottom: 1px solid transparent;
+                padding-bottom: 2px;
+                @include transition (all);
+                @include focus();
+                @include hover();
+                @include active();
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 14px;
+                }
+            }
+        }
+        &-nav {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media (max-width: $breackPoint_sm) {
+                grid-template-columns: 1fr 1fr;
+            }
+            div {
+                padding: 10px 0;
+                justify-content: center;
+                border: 1px solid $beuge;
+                @include transition (all);
+                @include hover-block();
+                @include active-block();
+                a{
+                  @include font (400, 16px, 145%);
+                  color: $beuge;
+                  border-bottom: 1px solid transparent;
+                  @include transition (all);
+                  @include focus();
+                  @include hover();
+                  @include active();
+                  @media (max-width: $breackPoint_sm) {
+                    font-size: 13px;
+                }
+                }
+            }
+        }
+    }
+    &__bottom {
+        padding-top: 550px;
+        padding-bottom: 120px;
+        justify-content: center;
+        gap: $margin30;
+        @media (max-width: $breackPoint_md) {
+            padding-top: 480px;
+            padding-bottom: 85px;
+        }
+        @media (max-width: $breackPoint_sm) {
+            padding-top: 200px;
+            padding-bottom: 75px;
+        }
+        
+    }
+}

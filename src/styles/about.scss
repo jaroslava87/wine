@@ -1,0 +1,63 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.about {
+    padding: $margin60;
+    @media (max-width: $breackPoint_sm) {
+        padding: $margin20;
+    }
+    &__container {
+        border: 1px solid $beuge;
+        padding: $margin60;
+        flex-direction: column;
+        align-items: center;
+        gap: $margin30;
+        @media (max-width: $breackPoint_xxl) {
+            padding: $margin40;
+        }
+        @media (max-width: $breackPoint_md) {
+            padding: $margin20;
+            gap: 10px;
+        }
+        &-title {
+            text-align: center;
+            @include font(600, 29px, 145%);
+            color: $beuge; 
+            @media (max-width: $breackPoint_xxl) {
+                font-size: 25px;
+            }
+            @media (max-width: $breackPoint_md) {
+                font-size: 20px;
+            }
+        }
+        &-line {
+            border-top: 1px solid $beuge;
+            width: 20%;
+        }
+        &-descr {
+            padding: 0 $margin60;
+            text-align: center;
+            @include font (400, 14px, 165%);
+            color: $white;
+            @media (max-width: $breackPoint_xxl) {
+                font-size: 12px;
+                padding: 0;
+            }
+            @media (max-width: $breackPoint_md) {
+                font-size: 9px;
+            }
+        }
+        img {
+            // width: 15%;
+            @media (max-width: $breackPoint_xl) {
+                width: 20%;
+            }
+            @media (max-width: $breackPoint_sm) {
+                width: 30%;
+            }
+        }
+    }
+    
+}

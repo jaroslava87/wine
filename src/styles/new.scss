@@ -1,0 +1,148 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.new {
+    background-color: $beuge;
+    &__container {
+        padding-top: $margin80;
+        padding-bottom: $margin80;
+        @media (max-width: $breackPoint_sm) {
+            padding-top: $margin40;
+            padding-bottom: $margin40;
+        }
+    }
+    &__content {
+        border-top: 1px solid $brown;
+        border-bottom: 1px solid $brown;
+        padding: $margin60 0;
+        justify-content: space-between;
+        flex-grow: 1;
+        @media (max-width: $breackPoint_sm) {
+            flex-direction: column;
+            padding-top: $margin20;
+            padding-bottom: $margin20;
+        }
+        &-left {
+            flex-direction: column;
+            justify-content: space-between;
+            width: 49%;
+            @media (max-width: $breackPoint_xl) {
+                width: 68%;
+            }
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+                margin-bottom: $margin20;
+            }
+            &-subtitle {
+                margin-bottom: 10px;
+                @include font (400, 16px, 165%);
+                color: $light-brown;
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 13px;
+                    margin-bottom: 2px;
+                }
+            }
+            &-title {
+                @include font(600, 24px, 145%);
+                color: $brown; 
+                margin-bottom: 15px;
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 20px;
+                }
+            }
+            &-line {
+               border-top: 1px solid $brown;
+               width: 20%;
+               padding-bottom: 15px;
+            }
+            &-descr {
+                @include font (400, 14px, 165%);
+                color: $brown;
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 10px;
+                    margin-bottom: $margin20;
+                }
+            }
+            &-block {
+                padding-bottom: $margin20;
+                &-stroke {
+                    &-left {
+                        border: 1px solid $brown;
+                        padding: 25px;
+                        align-items: center;
+                        @media (max-width: $breackPoint_sm) {
+                            padding: 18px;
+                        }
+                        p{
+                            @include font (400, 14px, 165%);
+                            color: $brown;
+                            @media (max-width: $breackPoint_sm) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    &-right {
+                        border: 1px solid $brown;
+                        padding: 25px;
+                        @media (max-width: $breackPoint_sm) {
+                            padding: 18px;
+                        }
+                        h3 {
+                            @include font (400, 18px, 165%);
+                            color: $brown;
+                            margin-bottom: 3px;
+                            @media (max-width: $breackPoint_sm) {
+                                font-size: 14px;
+                            }
+                        }
+                        p {
+                            @include font (400, 14px, 165%);
+                            color: $brown;
+                            @media (max-width: $breackPoint_sm) {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        &-right {
+            width: 49%;
+            gap: $margin30;
+            grid-template-areas: 
+            "img1 img1"
+            "img2 img3";
+            justify-content: center;
+            justify-items: center;
+            @media (max-width: $breackPoint_xl) {
+                width: 30%;
+                grid-template-areas: 
+                    "img1"
+                    "img2"
+                    "img3";
+            }
+            @media (max-width: $breackPoint_md) {
+                gap: $margin80;
+            }
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+                grid-template-areas: 
+                    "img2 img1 img3";
+                    gap: 5px;
+            }
+            &-img1 {
+                grid-area: img1;
+            }
+            &-img2 {
+                grid-area: img2;
+            }
+            &-img3 {
+                grid-area: img3;
+            }
+        }
+    }
+}
+
