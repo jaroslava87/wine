@@ -22,4 +22,4 @@
 (Responsive layout layout 1920 - 320 px. Project build: WEBPACK. Layout built on GRID, FLEX-BOX. HTML5, CSS3, 
 BEM methodology, Image and Font Optimization.) 
 
-<img src="https://github.com/jaroslava87/wine/blob/master/src/img/wine__preview.jpg" width="300px">
+<img src="https://github.com/jaroslava87/previews/blob/main/wine__preview.jpg" width="300px">
